@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Links Navegação -->
+            <div class="col-12 col-md-6 p-3 cabecalho">
+                <!-- Barra de navegação -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+
+                        <!-- Botão para abrir a navbar em telas menores -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Itens da navbar -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="perfil.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="profile-port.html">Portfólio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contato.html">Contato</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="col-12 col-md-6 p-3 cabecalho text-md-end text-center">
+                <button class="btn position-relative button-notifica" onclick="notificacao()">
+                    <i class="bi bi-bell bell"></i>
+                    Notificações
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger border border-light">99+</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="position-fixed" style="top: 10px; right: 10px; z-index: 1050;">
+            <div class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto" style="display: flex; align-items: center; font-size: 24px;">
+                        Notificações
+                        <div aria-label="Orange and tan hamster running in a metal wheel" role="img"
+                            class="wheel-and-hamster" style="margin-left: 10px;">
+                            <div class="wheel"></div>
+                            <div class="hamster">
+                                <div class="hamster__body">
+                                    <div class="hamster__head">
+                                        <div class="hamster__ear"></div>
+                                        <div class="hamster__eye"></div>
+                                        <div class="hamster__nose"></div>
+                                    </div>
+                                    <div class="hamster__limb hamster__limb--fr"></div>
+                                    <div class="hamster__limb hamster__limb--fl"></div>
+                                    <div class="hamster__limb hamster__limb--br"></div>
+                                    <div class="hamster__limb hamster__limb--bl"></div>
+                                    <div class="hamster__tail"></div>
+                                </div>
+                            </div>
+                            <div class="spoke"></div>
+                        </div>
+                    </strong>
+                    <button type="button" class="btn-close m-1" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body text-" style="font-size: 18px; color: #333;">
+                    <div class="notificacao">
+                        <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
+                                fill-opacity="1"></path>
+                        </svg>
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke-width="0"
+                                fill="currentColor" stroke="currentColor" class="icon">
+                                <path
+                                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="message-text-container">
+                            <p class="message-text">Mensagem 1</p>
+                            <p class="sub-text">So, make the friendship bracelets</p>
+                        </div>
+                    </div>
+                    <div class="notificacao">
+                        <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
+                                fill-opacity="1"></path>
+                        </svg>
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke-width="0"
+                                fill="currentColor" stroke="currentColor" class="icon">
+                                <path
+                                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="message-text-container">
+                            <p class="message-text">Mensagem 2</p>
+                            <p class="sub-text">Karma's a relaxing thought</p>
+                        </div>
+                    </div>
+                    <div class="notificacao">
+                        <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0,256L11.4,240C22.9,224,46,192,69,192C91.4,192,114,224,137,234.7C160,245,183,235,206,213.3C228.6,192,251,160,274,149.3C297.1,139,320,149,343,181.3C365.7,213,389,267,411,282.7C434.3,299,457,277,480,250.7C502.9,224,526,192,549,181.3C571.4,171,594,181,617,208C640,235,663,277,686,256C708.6,235,731,149,754,122.7C777.1,96,800,128,823,165.3C845.7,203,869,245,891,224C914.3,203,937,117,960,112C982.9,107,1006,181,1029,197.3C1051.4,213,1074,171,1097,144C1120,117,1143,107,1166,133.3C1188.6,160,1211,224,1234,218.7C1257.1,213,1280,139,1303,133.3C1325.7,128,1349,192,1371,192C1394.3,192,1417,128,1429,96L1440,64L1440,320L1428.6,320C1417.1,320,1394,320,1371,320C1348.6,320,1326,320,1303,320C1280,320,1257,320,1234,320C1211.4,320,1189,320,1166,320C1142.9,320,1120,320,1097,320C1074.3,320,1051,320,1029,320C1005.7,320,983,320,960,320C937.1,320,914,320,891,320C868.6,320,846,320,823,320C800,320,777,320,754,320C731.4,320,709,320,686,320C662.9,320,640,320,617,320C594.3,320,571,320,549,320C525.7,320,503,320,480,320C457.1,320,434,320,411,320C388.6,320,366,320,343,320C320,320,297,320,274,320C251.4,320,229,320,206,320C182.9,320,160,320,137,320C114.3,320,91,320,69,320C45.7,320,23,320,11,320L0,320Z"
+                                fill-opacity="1"></path>
+                        </svg>
+
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" stroke-width="0"
+                                fill="currentColor" stroke="currentColor" class="icon">
+                                <path
+                                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="message-text-container">
+                            <p class="message-text">Mensagem 3</p>
+                            <p class="sub-text">It's me, hi, I'm the problem, it's me</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-2">
+                <div class="dropdown">
+                    <button class="btn menu-cor dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu Dropdown
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="profile-port.html" target="_blank">Portfólio</a></li>
+                        <li><a class="dropdown-item" href="contato.html">Fale Conosco!</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Fechar</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container-sobre">
+                    <button class="btn sobremim" aria-expanded="false" aria-controls="card-sobre"
+                        data-bs-toggle="collapse" data-bs-target=".card-sobre">
+                        Sobre mim
+                    </button>
+                    <div class="card-sobre">
+                        <div class="card card-body">
+                            Sou uma pessoa dedicada e determinada, sempre buscando aprender e melhorar. Tenho um grande
+                            interesse por filmes e séries, o que me permite explorar novas histórias e perspectivas. Sou
+                            muito educada e sempre busco interagir de forma respeitosa com os outros. Embora seja um
+                            pouco ansiosa, tento equilibrar isso com minha vontade de alcançar meus objetivos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col d-flex justify-content-center align-items-center">
+                <button class="button-perfil" data-bs-toggle="modal" data-bs-target="#meuModal">
+                    Ver Perfil
+                </button>
+                <div class="modal" id="meuModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <img class="card-img-top" id="card2" src="foto.jpg" alt="CardImagem" style="width: 100%;">
+                            <div class="modal-header">
+                                <p class="card-text" id="card2">
+                                    Anna Beatriz Ferraz Rabelo Tavares, 21 anos
+                                    <br>Estudante de Engenharia da Computação
+                                    <br>
+                                    Botucatu-SP
+                                </p>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-5">
+            <div class="row">
+                <div class="col">
+                    <!-- Elemento pai do Accordion -->
+                    <div class="accordion" id="accordionID">
+                        <!-- Elemento filho Accordion -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="titulo1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#area1">
+                                    Experiência Profissional
+                                </button>
+                            </h2>
+                            <div id="area1" class="accordion-collapse collapse" data-bs-parent="#accordionID">
+                                <div class="accordion-body">
+                                    2022 - 2023 IBGE
+                                    <br>
+                                    Agente Censitário Supervisor
+                                    <br>
+                                    Atribuições: Supervisionar uma equipe de recenseadores.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="titulo1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#area2">
+                                    Habilidades
+                                </button>
+                            </h2>
+                            <div id="area2" class="accordion-collapse collapse" data-bs-parent="#accordionID">
+                                <div class="accordion-body">
+                                    Hard Skills:
+                                    <br>
+                                    Front-End
+                                    <br>
+                                    Java
+                                    <br>
+                                    Python
+                                    <br>
+                                    Figma
+                                    <br>
+                                    <br>
+                                    Soft Skills:
+                                    <br>
+                                    Escuta Ativa
+                                    <br>
+                                    Colaboração
+                                    <br>
+                                    Pensamento Crítico
+                                    <br>
+                                    Capacidade de Tomada de Decisão
+                                    <br>
+                                    Aprendizado Contínuo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="titulo1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#area3">
+                                    Formação
+                                </button>
+                            </h2>
+                            <div id="area3" class="accordion-collapse collapse" data-bs-parent="#accordionID">
+                                <div class="accordion-body">
+                                    Superior Incompleto
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer mt-2">
+            <div class="footer text-center">
+                <div class="central-container">
+                    <button class="btn btn-gradient" type="button" data-bs-toggle="popover" data-bs-title="Contato"
+                        data-bs-content="Email: anbefert@gmail.com" data-bs-placement="top">
+                        <span>Informações para Contato</span>
+                    </button>
+                </div>
+
+
+                <!-- Redes Sociais-->
+                <div class="social-buttons">
+                    <button class="button" onclick="window.open('https://www.instagram.com/annab_rabelo/')">
+                        <svg viewBox="0 0 24 24" fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+                            <path clip-rule="evenodd"
+                                d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                                fill-rule="evenodd" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <button class="button" onclick="window.open('https://wa.me')">
+                        <svg viewBox="0 0 24 24" fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+                            <path clip-rule="evenodd"
+                                d="M12 4a8 8 0 0 0-6.895 12.06l.569.718-.697 2.359 2.32-.648.379.243A8 8 0 1 0 12 4ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.96 9.96 0 0 1-5.016-1.347l-4.948 1.382 1.426-4.829-.006-.007-.033-.055A9.958 9.958 0 0 1 2 12Z"
+                                fill-rule="evenodd" fill="currentColor"></path>
+                            <path
+                                d="M16.735 13.492c-.038-.018-1.497-.736-1.756-.83a1.008 1.008 0 0 0-.34-.075c-.196 0-.362.098-.49.291-.146.217-.587.732-.723.886-.018.02-.042.045-.057.045-.013 0-.239-.093-.307-.123-1.564-.68-2.751-2.313-2.914-2.589-.023-.04-.024-.057-.024-.057.005-.021.058-.074.085-.101.08-.079.166-.182.249-.283l.117-.14c.121-.14.175-.25.237-.375l.033-.066a.68.68 0 0 0-.02-.64c-.034-.069-.65-1.555-.715-1.711-.158-.377-.366-.552-.655-.552-.027 0 0 0-.112.005-.137.005-.883.104-1.213.311-.35.22-.94.924-.94 2.16 0 1.112.705 2.162 1.008 2.561l.041.06c1.161 1.695 2.608 2.951 4.074 3.537 1.412.564 2.081.63 2.461.63.16 0 .288-.013.4-.024l.072-.007c.488-.043 1.56-.599 1.804-1.276.192-.534.243-1.117.115-1.329-.088-.144-.239-.216-.43-.308Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
+
+                    <button class="button" onclick="window.open('https://github.com/AnnaBia13')">
+                        <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            class="w-6 h-6 text-gray-800 dark:text-white">
+                            <path clip-rule="evenodd"
+                                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+                                fill-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        // Popoverd
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+        // Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        function notificacao() {
+            const noti = document.getElementById('myToast');
+            noti.classList.add("show")
+        }
+    </script>
+</body>
+
+</html>
