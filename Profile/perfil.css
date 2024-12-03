@@ -786,6 +786,8 @@ html, body {
 
 /* Estilo básico para o footer */
 footer {
+    position: absolute;
+    bottom: 0;
     background-color: #333;
     color: white;
     text-align: center;
