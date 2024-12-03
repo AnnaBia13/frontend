@@ -20,6 +20,25 @@
     /* Cor amarela no hover */
 }
 
+.navbar-toggler-icon {
+    background-color: #333;
+    /* Cor do ícone do hambúrguer */
+}
+
+.navbar-toggler {
+    border: none;
+    /* Remove a borda do botão */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #877474;
+    /* Garante que o ícone seja visível em telas pequenas */
+}
+
+.cabecalho {
+    background-color: #eeeeee;
+}
+
 .cabecalho {
     background-color: #eeeeee;
 
